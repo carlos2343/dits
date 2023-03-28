@@ -42,8 +42,8 @@ export class LoginComponent implements OnInit {
     const { email, password } = this.loginForm.value;
     this.authService.login(email!, password!).pipe(
       this.toast.observe({
-        success: 'Logged in successfully',
-        loading: 'Logging in...',
+        success: '',
+        loading: '',
         error: ({ message }) => {
           this.loginErrorMessage = message;
           //return `There was an error: ${message}`;
