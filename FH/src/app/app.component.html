@@ -1,10 +1,21 @@
 <mat-toolbar color = "">
     DITS (Donation Inventory Tracking System)
+
+    <ng-container *ngIf="AuthenticationService.currentUser$ | async as user; else loginButton">
+      <button mat-button
+      (click)="logout()">
+        <!-- <mat-icon>Logout</mat-icon> -->
+        Logout
+    </button>
+    </ng-container>
+
+  <ng-template #loginButton>
     <button mat-button
       (click)="onLoginClick($event)">
         <mat-icon></mat-icon>
         Login
     </button>
+  </ng-template>
 </mat-toolbar>
 <div class="">
     <router-outlet></router-outlet>
