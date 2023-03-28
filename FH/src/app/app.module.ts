@@ -13,7 +13,7 @@ import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LandingComponent } from './components/landing/landing.component';
-import { SignUpComponent } from './components/sign-up/sign-up.component';
+//import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { firebaseConfig } from '../environments/environment';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
@@ -29,7 +29,6 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
     HomeComponent,
     LoginComponent,
     LandingComponent,
-    SignUpComponent
   ],
   imports: [
     BrowserModule,
