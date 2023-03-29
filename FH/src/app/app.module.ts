@@ -13,7 +13,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LandingComponent } from './components/landing/landing.component';
 //import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { firebaseConfig } from '../environments/environment';
@@ -30,7 +29,7 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    LandingComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,

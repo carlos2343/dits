@@ -8,7 +8,7 @@ import {
   UserInfo,
   UserCredential,
 } from '@angular/fire/auth';
-import { concatMap, from, Observable, of, switchMap } from 'rxjs';
+import { concatMap, from, map, Observable, of, switchMap } from 'rxjs';
 
 
 @Injectable({
@@ -29,5 +29,12 @@ export class AuthenticationService {
 
   logout(): Observable<any> {
     return from(this.auth.signOut());
+  }
+
+  getUserRole(user: any): Observable<string> {
+    // Here, you can add your logic to get the user's role based on their uid or any other attribute.
+    // For now, let's assume that all users are not admin except for one with email "admin@example.com".
+    const isAdmin = user.email === "admin@example.com";
+    return of(isAdmin ? "admin" : "user");
   }
 }
