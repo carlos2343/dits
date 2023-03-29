@@ -1,3 +1,4 @@
+import { AdminComponent } from './components/admin/admin.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -19,6 +20,7 @@ import { firebaseConfig } from '../environments/environment';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { getStorage, provideStorage } from '@angular/fire/storage';
+//import { ProfileComponent } from './components/profile/profile.component';
 //import { AngularFirestoreModule } from "@angular/fire/firestore";
 
 

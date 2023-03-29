@@ -1,7 +1,7 @@
 <mat-toolbar color = "">
     <ng-container *ngIf="AuthenticationService.currentUser$ | async as user; else loginButton">
       <button mat-button
-      (click)="logout()">
+      (click)="logout()" class="marginbutton">
       <mat-icon></mat-icon>
       Logout
     </button>
@@ -31,7 +31,7 @@
 <ul class="menu__box">
   <li><a class="menu__item" href="/">Home</a></li>
   <li><a class="menu__item" href="/admin">Admin</a></li>
+  <li><a class="menu__item" href="/landing">Landing</a></li>
   <li><a class="menu__item" href="/login">Login</a></li>
-  <li><a class="menu__item" href="/sign-up">Sign-up/Sign-out</a></li>
 </ul>
 </div>
