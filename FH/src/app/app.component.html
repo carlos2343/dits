@@ -11,7 +11,6 @@
     <button mat-button
       (click)="onLoginClick($event)">
         <mat-icon></mat-icon>
-        Login
     </button>
   </ng-template>
 </mat-toolbar>
@@ -29,7 +28,7 @@
   </label>
 
   <ul class="menu__box">
-    <li><a class="menu__item" href="/">Home</a></li>
+    <li><a class="menu__item" href="/home">Home</a></li>
     <li *ngIf="AuthenticationService.currentUser$ | async as user">
       <a class="menu__item" href="/admin">Admin</a>
     </li>
