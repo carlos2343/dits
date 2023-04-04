@@ -19,6 +19,12 @@ import { firebaseConfig } from '../environments/environment';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { getStorage, provideStorage } from '@angular/fire/storage';
+import { DonateComponent } from './components/donate/donate.component';
+import { MatError } from '@angular/material/form-field';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/compiler';
+import { MatFormField } from '@angular/material/form-field';
+import { MatToolbar } from '@angular/material/toolbar';
+import { MatIcon } from '@angular/material/icon';
 //import { ProfileComponent } from './components/profile/profile.component';
 //import { AngularFirestoreModule } from "@angular/fire/firestore";
 
@@ -30,7 +36,8 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
     HomeComponent,
     LoginComponent,
     AdminComponent,
-  ],
+    DonateComponent
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -47,8 +54,14 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()),
+    MatError,
+    MatFormField,
+    MatToolbar,
+    MatIcon
   ],
   providers: [],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

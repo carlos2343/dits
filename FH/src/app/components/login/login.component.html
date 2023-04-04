@@ -1,7 +1,7 @@
 <div class="form-container mat-elevation-z5">
   <div *ngIf="loginErrorMessage != ''">{{loginErrorMessage}}</div>
   <h1>Login</h1>
-  <form [formGroup]="loginForm" (ngSubmit)="submit()">
+  <mat-form [formGroup]="loginForm" (ngSubmit)="submit()">
     <mat-form-field>
       <input matInput placeholder="Email address" formControlName="email" />
       <mat-error class="error-message" *ngIf="email?.errors?.['required']">
@@ -22,5 +22,5 @@
     </div>
 
     <span class="center margin-top">New to our platform?<a class="sign-up-link" routerLink="/sign-up">Sign up!</a></span>
-  </form>
+  </mat-form>
 </div>

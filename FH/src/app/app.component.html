@@ -1,25 +1,5 @@
-<mat-toolbar color = "">
-    <ng-container *ngIf="AuthenticationService.currentUser$ | async as user; else loginButton">
-      <button mat-button
-      (click)="logout()" class="marginbutton">
-      <mat-icon></mat-icon>
-      Logout
-    </button>
-    </ng-container>
 
-  <ng-template #loginButton>
-    <button mat-button
-      (click)="onLoginClick($event)">
-        <mat-icon></mat-icon>
-    </button>
-  </ng-template>
-</mat-toolbar>
-<div class="">
-    <router-outlet></router-outlet>
-</div>
-<div class="">
-  <router-outlet></router-outlet>
-</div>
+
 
 <div class="hamburger-menu">
   <input id="menu__toggle" type="checkbox" />
@@ -38,6 +18,7 @@
     <ng-container *ngIf="AuthenticationService.currentUser$ | async as user; else logoutButton">
       <li><a class="menu__item" href="/" (click)="logout()">Logout</a></li>
     </ng-container>
+    <li><a class="menu_item" href="/donate">Donate</a></li>
     <ng-template #logoutButton></ng-template>
   </ul>
 </div>

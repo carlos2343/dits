@@ -5,8 +5,8 @@ body {
 #enterDetails {
   float: left;
   width: 50%;
-  background-color: darkslategray;
-  color: floralwhite;
+  background-color: rgb(69, 19, 156);
+  color: rgb(69, 19, 156);
 }
 
 #findDetails {

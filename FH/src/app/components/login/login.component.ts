@@ -3,7 +3,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HotToastService } from '@ngneat/hot-toast';
 import { AuthenticationService } from 'src/services/authentication.service';
-
+import { MatError } from '@angular/material/form-field';
+import { MatFormField } from '@angular/material/form-field';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
